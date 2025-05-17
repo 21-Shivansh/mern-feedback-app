@@ -6,7 +6,7 @@ const FeedbackItem = ({ feedback }) => {
   const handleDelete = async () => {
     if (window.confirm('Delete this feedback?')) {
       try {
-        await axios.delete(`https://mern-feedback-app-ojhj.onrender.com/api/feedback/${feedback._id}`);
+        await axios.delete(`https://feedback-app-0eg4.onrender.com/api/feedback/${feedback._id}`);
         toast.success('Feedback deleted');
         window.location.reload(); 
       } catch (err) {
