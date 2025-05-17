@@ -11,18 +11,18 @@ const allowedOrigins = ['https://mern-feedback-app.vercel.app', 'http://localhos
 
 app.use(cors({
   origin: function(origin, callback) {
-
+    // Allow requests with no origin (e.g., Postman) or allowed origins only
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'DELETE', 'OPTIONS'], // Include OPTIONS here
   credentials: true,
 }));
 
-
+// Enable preflight OPTIONS requests for all routes
 app.options('*', cors());
 
 app.use(express.json());
