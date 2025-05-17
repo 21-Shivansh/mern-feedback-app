@@ -8,7 +8,7 @@ const FeedbackList = ({ refresh }) => {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/feedback');
+        const res = await axios.get('https://mern-feedback-app-ojhj.onrender.com/api/feedback');
         setFeedbacks(res.data);
       } catch (err) {
         console.error('Error fetching feedback:', err);

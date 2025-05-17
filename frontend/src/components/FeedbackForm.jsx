@@ -14,7 +14,7 @@ const FeedbackForm = ({ onFeedbackSubmitted }) => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/feedback', { name, message });
+      await axios.post('https://mern-feedback-app-ojhj.onrender.com/api/feedback', { name, message });
       toast.success('Feedback submitted!');
       setName('');
       setMessage('');
