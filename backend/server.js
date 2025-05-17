@@ -7,7 +7,6 @@ const feedbackRoutes = require('./routes/feedback');
 
 const app = express();
 
-const cors = require('cors');
 app.use(cors({
   origin: 'https://mern-feedback-app.vercel.app',  // Allow your frontend domain
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed HTTP methods
