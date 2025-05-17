@@ -8,7 +8,7 @@ const feedbackRoutes = require('./routes/feedback');
 const app = express();
 
 app.use(cors({
-  origin: ['https://mern-feedback-app.vercel.app/', 'http://localhost:3000'],
+  origin: ['https://mern-feedback-app.vercel.app', 'http://localhost:3000'],
   methods: ['GET', 'POST', 'DELETE'],
   credentials: true,
 }));
